@@ -6,6 +6,8 @@ import sdm.Karyawan;
 import billing.Customer;
 import expertsystem.Expert;
 import alarmsystem.Alarm;
+import classifier.IrisClassifier;
+import classifier.ColdDetector;
 
 public class Aplikasi {
     public static void main(String[] args) {
@@ -160,6 +162,69 @@ public class Aplikasi {
         //test case 1
         statusAlarmWarning = alarm.isAlarmStatusWarning(40, false, false);
         System.out.println(statusAlarmWarning);
+        System.out.println("==================");
+        
+        IrisClassifier irisClassifier = new IrisClassifier();
+        String jenisBunga;
+        //panjang sepal, lebar sepal, panjang petal, lebar petal
+        //test case 1
+        jenisBunga = irisClassifier.predict(4.3, 3.0, 1.1, 0.1);
+        System.out.println(jenisBunga);
+        //test case 2
+        jenisBunga = irisClassifier.predict(4.8, 3.0, 1.4, 0.1);
+        System.out.println(jenisBunga);
+        //test case 3
+        jenisBunga = irisClassifier.predict(5.2, 4.1, 1.5, 0.1);
+        System.out.println(jenisBunga);
+        //test case 4
+        jenisBunga = irisClassifier.predict(4.6, 3.6, 1.0, 0.2);
+        System.out.println(jenisBunga);
+        //test case 5
+        jenisBunga = irisClassifier.predict(5.1, 3.3, 1.7, 0.5);
+        System.out.println(jenisBunga);
+        //test case 6
+        jenisBunga = irisClassifier.predict(5.0, 3.5, 1.6, 0.6);
+        System.out.println(jenisBunga);
+        //test case 7
+        jenisBunga = irisClassifier.predict(5.0, 2.3, 3.3, 1.0);
+        System.out.println(jenisBunga);
+        //test case 8
+        jenisBunga = irisClassifier.predict(4.9, 2.4, 3.3, 1.0);
+        System.out.println(jenisBunga);
+        //test case 9
+        jenisBunga = irisClassifier.predict(5.0, 2.0, 3.5, 1.0);
+        System.out.println(jenisBunga);
+        //test case 10
+        jenisBunga = irisClassifier.predict(6.1, 2.8, 4.0, 1.3);
+        System.out.println(jenisBunga);
+        //test case 11
+        jenisBunga = irisClassifier.predict(5.7, 2.8, 4.1, 1.3);
+        System.out.println(jenisBunga);
+        //test case 12
+        jenisBunga = irisClassifier.predict(5.6, 3.0, 4.1, 1.3);
+        System.out.println(jenisBunga);
+        //test case 13
+        jenisBunga = irisClassifier.predict(6.1, 2.6, 5.6, 1.4);
+        System.out.println(jenisBunga);
+        //test case 14
+        jenisBunga = irisClassifier.predict(6.0, 2.2, 5.0, 1.5);
+        System.out.println(jenisBunga);
+        //test case 15
+        jenisBunga = irisClassifier.predict(6.3, 2.2, 5.0, 1.5);
+        System.out.println(jenisBunga);
+        //test case 16
+        jenisBunga = irisClassifier.predict(7.2, 3.0, 5.8, 1.6);
+        System.out.println(jenisBunga);
+        //test case 17
+        jenisBunga = irisClassifier.predict(4.9, 2.5, 4.5, 1.7);
+        System.out.println(jenisBunga);
+        //test case 18
+        jenisBunga = irisClassifier.predict(6.2, 2.8, 4.8, 1.8);
+        System.out.println(jenisBunga);
+        System.out.println("=============");
+        
+        ColdDetector coldDetector = new ColdDetector();
+        coldDetector.uji("C:\\aaa\\testcases1.csv");        
         
     
     }
